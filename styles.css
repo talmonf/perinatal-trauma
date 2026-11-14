@@ -139,19 +139,13 @@ p {
   min-height: 48px;
   padding: 10px 16px;
   border-radius: 999px;
-  background: var(--button);
-  color: var(--page);
+  background: #25d366;
+  color: #fff;
   font-size: 14px;
   font-weight: 700;
   line-height: 1.2;
   text-decoration: none;
-  transition: opacity 0.15s ease, background 0.15s ease;
-}
-
-.button svg {
-  width: 1.05rem;
-  height: 1.05rem;
-  fill: currentColor;
+  transition: background 0.15s ease;
 }
 
 .button-lg {
@@ -162,7 +156,7 @@ p {
 }
 
 .button:hover {
-  opacity: 0.9;
+  background: #1ebe57;
 }
 
 .button:active {
@@ -267,42 +261,6 @@ p {
   margin-top: 0.85rem;
   margin-bottom: 0;
   font-size: 0.95rem;
-}
-
-@media (max-width: 639px) {
-  .header-inner {
-    flex-direction: row-reverse;
-  }
-
-  .header-inner .button {
-    width: 48px;
-    height: 44px;
-    min-height: 44px;
-    padding: 0;
-  }
-
-  .header-inner .button-label {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-  }
-
-  .header-inner .button svg {
-    width: 18px;
-    height: 18px;
-  }
-}
-
-@media (min-width: 640px) {
-  .header-inner .button {
-    padding: 10px 20px;
-  }
 }
 
 @media (min-width: 768px) {
