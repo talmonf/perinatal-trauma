@@ -7,7 +7,7 @@
   --button-hover: #b07d4f;
   --line: #d2dcd0;
   --sage: #e0e7df;
-  --header: 65px;
+  --header: 74px;
   --shadow: 0 10px 30px rgba(26, 66, 66, 0.05);
 }
 
@@ -136,8 +136,11 @@ p {
 
 .brand-logo {
   display: block;
-  height: 48px;
-  width: auto;
+  width: 46px;
+  height: 58px;
+  object-fit: cover;
+  object-position: center 38%;
+  border-radius: 50%;
 }
 
 .button {
@@ -278,9 +281,9 @@ p {
 
 @media (max-width: 767px) {
   .help-bg {
-    top: 34%;
-    bottom: 12%;
-    width: min(22rem, 92%);
+    top: 37%;
+    bottom: 20%;
+    width: min(17rem, 74%);
   }
 }
 
@@ -302,8 +305,8 @@ p {
   background: var(--card);
 }
 
-.card-focus {
-  background: rgba(251, 250, 249, 0.78);
+.band-help .card {
+  background: rgba(251, 250, 249, 0.28);
 }
 
 .card .rule {
@@ -361,9 +364,17 @@ p {
   }
 
   .help-bg {
-    top: 16%;
-    bottom: 10%;
-    width: min(28rem, 38vw);
+    top: 42%;
+    bottom: auto;
+    width: 210px;
+    height: 236px;
+  }
+
+  .help-bg img {
+    object-fit: contain;
+    object-position: center;
+    -webkit-mask-image: none;
+    mask-image: none;
   }
 
   .hero-media img {
