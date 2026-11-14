@@ -65,9 +65,8 @@ try:
     about = "document.documentElement.style.scrollBehavior='auto'; document.querySelector('.about-grid').scrollIntoView({block:'start'})"
 
     help = "document.documentElement.style.scrollBehavior='auto'; document.querySelector('.band-help').scrollIntoView({block:'start'})"
-    shoot("header-1440.png", 1440, 220, False, top)
+    shoot("hero-1440.png", 1440, 900, False, top)
     shoot("help-1440.png", 1440, 900, False, help)
-    shoot("header-390.png", 390, 180, True, top)
     shoot("help-390.png", 390, 900, True, help)
     ws.close()
 finally:

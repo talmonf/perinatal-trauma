@@ -284,6 +284,7 @@ p {
     top: 37%;
     bottom: 20%;
     width: min(17rem, 74%);
+    opacity: 0.45;
   }
 }
 
@@ -306,7 +307,7 @@ p {
 }
 
 .band-help .card {
-  background: rgba(251, 250, 249, 0.28);
+  background: rgba(251, 250, 249, 0.88);
 }
 
 .card .rule {
@@ -364,21 +365,54 @@ p {
   }
 
   .help-bg {
-    top: 42%;
+    top: 58%;
     bottom: auto;
-    width: 210px;
-    height: 236px;
+    width: 460px;
+    height: 516px;
+    transform: translate(-50%, -50%);
+    opacity: 0.42;
   }
 
   .help-bg img {
     object-fit: contain;
     object-position: center;
-    -webkit-mask-image: none;
-    mask-image: none;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 58%, transparent 82%);
+    mask-image: radial-gradient(ellipse at center, #000 58%, transparent 82%);
+  }
+
+  .hero-copy {
+    max-width: 34rem;
+  }
+
+  .hero-media {
+    inset: auto;
+    top: 50%;
+    right: max(2.5rem, calc((100% - 1180px) / 2));
+    bottom: auto;
+    left: auto;
+    width: min(320px, 26vw);
+    transform: translateY(-50%);
   }
 
   .hero-media img {
-    transform: scale(1.35);
-    transform-origin: 4% 32%;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    filter: blur(0.6px);
+    opacity: 0.72;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 64%, transparent 88%);
+    mask-image: radial-gradient(ellipse at center, #000 64%, transparent 88%);
+  }
+
+  .hero-shade {
+    background: linear-gradient(
+      to right,
+      rgba(250, 248, 245, 0.96) 0%,
+      rgba(250, 248, 245, 0.9) 40%,
+      rgba(250, 248, 245, 0.45) 68%,
+      rgba(250, 248, 245, 0.2) 100%
+    );
   }
 }
