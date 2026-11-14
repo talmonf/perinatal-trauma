@@ -307,7 +307,15 @@ p {
 }
 
 .band-help .card {
-  background: rgba(251, 250, 249, 0.88);
+  background: rgba(251, 250, 249, 0.38);
+}
+
+.band-help .card h3,
+.band-help .card p {
+  color: var(--ink);
+  text-shadow:
+    0 0 12px rgba(250, 248, 245, 0.95),
+    0 1px 0 rgba(250, 248, 245, 0.9);
 }
 
 .card .rule {
