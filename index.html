@@ -5,6 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Rachael Friedlander | Trauma Therapist</title>
   <meta name="description" content="Guidance and support for women and infants who have experienced traumatic events. Trauma therapy with a holistic approach incorporating CBT and somatic work.">
+  <script>
+    (function () {
+      var stored;
+      try { stored = localStorage.getItem("lang"); } catch (e) {}
+      var primary = (navigator.language || "").toLowerCase();
+      var hebrew = /^he([-_]|$)/.test(primary) || /^iw([-_]|$)/.test(primary);
+      var lang = stored === "he" || stored === "en" ? stored : (hebrew ? "he" : "en");
+      var root = document.documentElement;
+      root.lang = lang;
+      root.dir = lang === "he" ? "rtl" : "ltr";
+      if (lang === "he") {
+        document.title = "רחל פרידלנדר | מטפלת בטראומה";
+        var desc = document.querySelector('meta[name="description"]');
+        if (desc) {
+          desc.setAttribute("content", "ליווי ותמיכה לנשים ולתינוקות שחוו אירועים טראומטיים. טיפול בטראומה בגישה הוליסטית המשלבת CBT ועבודה סומטית.");
+        }
+      }
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,7 +32,15 @@
 <body>
   <header class="site-header">
     <div class="wrap header-inner">
-      <a class="brand" href="#top">Rachael Friedlander <img class="brand-logo" src="images/logo.png" alt=""></a>
+      <a class="brand" href="#top">
+        <span class="i18n-en">Rachael Friedlander</span>
+        <span class="i18n-he">רחל פרידלנדר</span>
+        <img class="brand-logo" src="images/logo.png" alt="">
+      </a>
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="lang-option" data-set-lang="en" lang="en">EN</button>
+        <button type="button" class="lang-option" data-set-lang="he" lang="he">עב</button>
+      </div>
     </div>
   </header>
 
@@ -24,18 +51,35 @@
       </div>
       <div class="hero-shade" aria-hidden="true"></div>
       <div class="wrap hero-copy">
-        <h1>Pre and Perinatal Trauma Therapist with a holistic approach <span class="h1-muted">incorporating CBT and somatic (body) work</span></h1>
-        <p class="lede">Guidance and support for women and infants who have experienced traumatic events</p>
+        <h1>
+          <span class="i18n-en">Pre and Perinatal Trauma Therapist with a holistic approach</span>
+          <span class="i18n-he">מטפלת בטראומה <span class="nowrap">טרום־לידתית</span> ו<span class="nowrap">סב־לידתית</span> בגישה הוליסטית</span>
+          <span class="h1-muted i18n-en">incorporating CBT and somatic (body) work</span>
+          <span class="h1-muted i18n-he">המשלבת <span class="ltr">CBT</span> ועבודה סומטית <span class="nowrap">(עבודה עם הגוף)</span></span>
+        </h1>
+        <p class="lede">
+          <span class="i18n-en">Guidance and support for women and infants who have experienced traumatic events</span>
+          <span class="i18n-he">ליווי ותמיכה לנשים ולתינוקות שחוו אירועים טראומטיים</span>
+        </p>
       </div>
     </section>
 
     <section class="band band-card">
       <div class="wrap narrow">
         <span class="rule" aria-hidden="true"></span>
-        <h2>When trauma becomes overwhelming</h2>
+        <h2>
+          <span class="i18n-en">When trauma becomes overwhelming</span>
+          <span class="i18n-he">כשהטראומה הופכת למציפה</span>
+        </h2>
         <!-- DRAFT FOR REVIEW: These two paragraphs were blank in the Google Doc. They use only the people and methods Rachael already named. Replace them when final copy is ready. -->
-        <p>Trauma can show up as anxiety, chronic pain, grief, a difficult birth, or a relationship that feels stuck. It can leave you overwhelmed, disconnected, or unsure how to help your child.</p>
-        <p class="emphasis">Sessions bring together CBT and somatic work, so we can go at your pace with both the story and what the body is holding, and look for what helps you, and/or your family/baby, feel safer and more stable.</p>
+        <p>
+          <span class="i18n-en">Trauma can show up as anxiety, chronic pain, grief, a difficult birth, or a relationship that feels stuck. It can leave you overwhelmed, disconnected, or unsure how to help your child.</span>
+          <span class="i18n-he">טראומה יכולה להופיע כחרדה, כאב כרוני, אבל, לידה קשה, או קשר שמרגיש תקוע. היא יכולה להשאיר תחושה של הצפה וניתוק, או קושי לדעת איך לעזור לילד.</span>
+        </p>
+        <p class="emphasis">
+          <span class="i18n-en">Sessions bring together CBT and somatic work, so we can go at your pace with both the story and what the body is holding, and look for what helps you, and/or your family/baby, feel safer and more stable.</span>
+          <span class="i18n-he">במפגשים משלבים <span class="ltr">CBT</span> ועבודה סומטית, כך שאפשר להתקדם בקצב שלך גם עם הסיפור וגם עם מה שהגוף מחזיק, ולחפש את מה שעוזר לך ו/או למשפחה או לתינוק להרגיש יותר ביטחון ויציבות.</span>
+        </p>
       </div>
     </section>
 
@@ -45,22 +89,43 @@
       </div>
       <div class="wrap">
         <span class="rule" aria-hidden="true"></span>
-        <h2>Who I help</h2>
+        <h2>
+          <span class="i18n-en">Who I help</span>
+          <span class="i18n-he">את מי אני מלווה</span>
+        </h2>
         <div class="cards">
           <article class="card">
             <span class="rule" aria-hidden="true"></span>
-            <h3>Women</h3>
-            <p>Women who are suffering from depression, anxiety, grief, loss, or relational issues.</p>
+            <h3>
+              <span class="i18n-en">Women</span>
+              <span class="i18n-he">נשים</span>
+            </h3>
+            <p>
+              <span class="i18n-en">Women who are suffering from depression, anxiety, grief, loss, or relational issues.</span>
+              <span class="i18n-he">נשים שסובלות מדיכאון, מחרדה, מאבל, מאובדן או מקשיים בקשר.</span>
+            </p>
           </article>
           <article class="card card-focus">
             <span class="rule" aria-hidden="true"></span>
-            <h3>Post-partum mums and babies</h3>
-            <p>Mums and/or babies suffering from pre or perinatal trauma.</p>
+            <h3>
+              <span class="i18n-en">Post-partum mums and babies</span>
+              <span class="i18n-he">אמהות אחרי לידה ותינוקות</span>
+            </h3>
+            <p>
+              <span class="i18n-en">Mums and/or babies suffering from pre or perinatal trauma.</span>
+              <span class="i18n-he">אמהות ו/או תינוקות עם טראומה <span class="nowrap">טרום־לידתית</span> או <span class="nowrap">סב־לידתית</span>.</span>
+            </p>
           </article>
           <article class="card">
             <span class="rule" aria-hidden="true"></span>
-            <h3>Parents</h3>
-            <p>Parents experiencing issues with children, teens, or adult children.</p>
+            <h3>
+              <span class="i18n-en">Parents</span>
+              <span class="i18n-he">הורים</span>
+            </h3>
+            <p>
+              <span class="i18n-en">Parents experiencing issues with children, teens, or adult children.</span>
+              <span class="i18n-he">הורים שמתמודדים עם קשיים מול ילדים, מתבגרים או ילדים בוגרים.</span>
+            </p>
           </article>
         </div>
       </div>
@@ -69,26 +134,50 @@
     <section class="band band-sage">
       <div class="wrap narrow">
         <span class="rule" aria-hidden="true"></span>
-        <h2>About Me</h2>
-        <p class="welcome">Hey there and welcome!</p>
-        <p>I am a licensed clinical social worker with a Masters in Social work and a Masters in Counseling. I trained in Cognitive Behavioural Therapy at the Israel Centre for Psychotrauma and am a qualified Somatic Experiencing therapist.</p>
-        <p>I also trained with Dr Jonathan Evans (pediatric osteopath and craniosacral therapist) in Touch Therapy with newborns and infants.</p>
-        <p>I have extensive experience in pre and perinatal trauma, developmental trauma, anxiety and depression in women. I also treat infants and children who have experienced medical procedure trauma, and/or grief and loss.</p>
+        <h2>
+          <span class="i18n-en">About Me</span>
+          <span class="i18n-he">עליי</span>
+        </h2>
+        <p class="welcome">
+          <span class="i18n-en">Hey there and welcome!</span>
+          <span class="i18n-he">היי, וברוכים הבאים!</span>
+        </p>
+        <p>
+          <span class="i18n-en">I am a licensed clinical social worker with a Masters in Social work and a Masters in Counseling. I trained in Cognitive Behavioural Therapy at the Israel Centre for Psychotrauma and am a qualified Somatic Experiencing therapist.</span>
+          <span class="i18n-he">אני עובדת סוציאלית קלינית מוסמכת, בעלת תואר שני בעבודה סוציאלית ותואר שני בייעוץ. התמחיתי בטיפול קוגניטיבי־התנהגותי במרכז הישראלי לטיפול בפסיכוטראומה, ואני מטפלת מוסמכת בשיטת <span class="ltr">Somatic Experiencing.</span></span>
+        </p>
+        <p>
+          <span class="i18n-en">I also trained with Dr Jonathan Evans (pediatric osteopath and craniosacral therapist) in Touch Therapy with newborns and infants.</span>
+          <span class="i18n-he">התמחיתי גם אצל ד״ר ג׳ונתן אוונס (אוסטאופת ילדים ומטפל בקרניוסקרל) בטיפול במגע לילודים ולתינוקות.</span>
+        </p>
+        <p>
+          <span class="i18n-en">I have extensive experience in pre and perinatal trauma, developmental trauma, anxiety and depression in women. I also treat infants and children who have experienced medical procedure trauma, and/or grief and loss.</span>
+          <span class="i18n-he">יש לי ניסיון רב בטראומה <span class="nowrap">טרום־לידתית</span> ו<span class="nowrap">סב־לידתית</span>, בטראומה התפתחותית, ובחרדה ובדיכאון אצל נשים. אני מטפלת גם בתינוקות ובילדים שעברו טראומה בעקבות הליכים רפואיים, ו/או אבל ואובדן.</span>
+        </p>
       </div>
     </section>
 
     <section class="band band-close">
       <div class="wrap narrow">
         <span class="rule" aria-hidden="true"></span>
-        <h2>You do not have to go through this alone</h2>
-        <p>If you are living with the effects of trauma, caring for a baby after a difficult beginning, or looking for support as a parent, you are welcome to contact me.</p>
+        <h2>
+          <span class="i18n-en">You do not have to go through this alone</span>
+          <span class="i18n-he">את לא צריכה לעבור את זה לבד</span>
+        </h2>
+        <p>
+          <span class="i18n-en">If you are living with the effects of trauma, caring for a baby after a difficult beginning, or looking for support as a parent, you are welcome to contact me.</span>
+          <span class="i18n-he">אם מדובר בחיים לצד השפעות של טראומה, בליווי תינוק אחרי התחלה קשה, או בחיפוש תמיכה כהורה — אפשר לפנות אליי.</span>
+        </p>
       </div>
     </section>
   </main>
 
   <footer class="site-footer" id="contact">
-    <div class="wrap">
-      <p class="footer-name">Rachael Friedlander, MA, MBA, MSW, SEP</p>
+    <div class="wrap narrow">
+      <p class="footer-name">
+        <span class="i18n-en">Rachael Friedlander, MA, MBA, MSW, SEP</span>
+        <span class="i18n-he">רחל פרידלנדר, <span dir="ltr">MA, MBA, MSW, SEP</span></span>
+      </p>
       <p class="footer-contact">
         <a class="button" data-whatsapp href="https://wa.me/972544490957" aria-label="WhatsApp">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -99,23 +188,67 @@
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1L6.6 10.8z"/>
           </svg>
-          +972 54 4490957
+          <span dir="ltr">+972 54 4490957</span>
         </a>
         <a href="mailto:rach_fried@yahoo.com">
           <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
             <path fill="currentColor" d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5L4 8V6l8 5 8-5v2z"/>
           </svg>
-          rach_fried@yahoo.com
+          <span dir="ltr">rach_fried@yahoo.com</span>
         </a>
       </p>
     </div>
   </footer>
 
   <script>
-    const WHATSAPP_URL = "https://wa.me/972544490957";
-    document.querySelectorAll("[data-whatsapp]").forEach((link) => {
-      link.href = WHATSAPP_URL;
-    });
+    (function () {
+      var KEY = "lang";
+      var copy = {
+        en: {
+          title: "Rachael Friedlander | Trauma Therapist",
+          description: "Guidance and support for women and infants who have experienced traumatic events. Trauma therapy with a holistic approach incorporating CBT and somatic work.",
+          langLabel: "Language",
+          whatsapp: "WhatsApp"
+        },
+        he: {
+          title: "רחל פרידלנדר | מטפלת בטראומה",
+          description: "ליווי ותמיכה לנשים ולתינוקות שחוו אירועים טראומטיים. טיפול בטראומה בגישה הוליסטית המשלבת CBT ועבודה סומטית.",
+          langLabel: "שפה",
+          whatsapp: "וואטסאפ"
+        }
+      };
+
+      function apply(lang, persist) {
+        var text = copy[lang] || copy.en;
+        var root = document.documentElement;
+        root.lang = lang;
+        root.dir = lang === "he" ? "rtl" : "ltr";
+        document.title = text.title;
+        var desc = document.querySelector('meta[name="description"]');
+        if (desc) desc.setAttribute("content", text.description);
+        var group = document.querySelector(".lang-switch");
+        if (group) group.setAttribute("aria-label", text.langLabel);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          var selected = button.getAttribute("data-set-lang") === lang;
+          button.setAttribute("aria-pressed", selected ? "true" : "false");
+        });
+        document.querySelectorAll("[data-whatsapp]").forEach(function (link) {
+          link.href = "https://wa.me/972544490957";
+          link.setAttribute("aria-label", text.whatsapp);
+        });
+        if (persist) {
+          try { localStorage.setItem(KEY, lang); } catch (e) {}
+        }
+      }
+
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          apply(button.getAttribute("data-set-lang"), true);
+        });
+      });
+
+      apply(document.documentElement.lang === "he" ? "he" : "en", false);
+    })();
   </script>
 </body>
 </html>

@@ -182,9 +182,78 @@ p {
 }
 
 .button:focus-visible,
-.brand:focus-visible {
+.brand:focus-visible,
+.lang-option:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
+}
+
+.lang-switch {
+  direction: ltr;
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.lang-option {
+  appearance: none;
+  margin: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  padding: 0.42rem 0.68rem;
+  cursor: pointer;
+}
+
+.lang-option:hover {
+  color: var(--ink);
+}
+
+html:not([lang="he"]) .lang-option[data-set-lang="en"],
+html[lang="he"] .lang-option[data-set-lang="he"] {
+  background: var(--ink);
+  color: var(--page);
+}
+
+html:not([lang="he"]) .lang-option[data-set-lang="en"]:hover,
+html[lang="he"] .lang-option[data-set-lang="he"]:hover {
+  color: var(--page);
+}
+
+html[lang="he"] h1,
+html[lang="he"] h2,
+html[lang="he"] h3,
+html[lang="he"] .brand {
+  letter-spacing: 0;
+}
+
+html[lang="he"] h1 {
+  line-height: 1.45;
+}
+
+html[lang="he"] .i18n-en,
+html:not([lang="he"]) .i18n-he {
+  display: none;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.ltr {
+  unicode-bidi: isolate;
+  direction: ltr;
+  white-space: nowrap;
 }
 
 .hero {
@@ -216,7 +285,7 @@ p {
 
 .hero-shade {
   background: linear-gradient(
-    to right,
+    to inline-end,
     rgba(250, 248, 245, 0.85) 0%,
     rgba(250, 248, 245, 0.4) 50%,
     rgba(250, 248, 245, 0.2) 100%
@@ -441,9 +510,7 @@ p {
   .hero-media {
     inset: auto;
     top: 50%;
-    right: max(2.5rem, calc((100% - 1180px) / 2));
-    bottom: auto;
-    left: auto;
+    inset-inline-end: max(2.5rem, calc((100% - 1180px) / 2));
     width: min(320px, 26vw);
     transform: translateY(-50%);
   }
@@ -462,7 +529,7 @@ p {
 
   .hero-shade {
     background: linear-gradient(
-      to right,
+      to inline-end,
       rgba(250, 248, 245, 0.96) 0%,
       rgba(250, 248, 245, 0.9) 40%,
       rgba(250, 248, 245, 0.45) 68%,
