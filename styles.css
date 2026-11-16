@@ -102,8 +102,7 @@ p {
 
 .lede,
 .card p,
-.site-footer p,
-.copyright {
+.site-footer p {
   color: var(--muted);
 }
 
@@ -140,7 +139,7 @@ p {
   width: 46px;
   height: 58px;
   object-fit: cover;
-  object-position: center 38%;
+  object-position: center;
   border-radius: 50%;
 }
 
@@ -148,24 +147,30 @@ p {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  min-height: 48px;
-  padding: 10px 16px;
-  border-radius: 999px;
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  border-radius: 50%;
   background: #25d366;
   color: #fff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.2;
   text-decoration: none;
   transition: background 0.15s ease;
 }
 
+.button svg {
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+
 .button-lg {
-  min-height: 48px;
-  padding: 16px 32px;
-  font-size: 18px;
-  line-height: 28px;
+  width: 64px;
+  height: 64px;
+}
+
+.button-lg svg {
+  width: 36px;
+  height: 36px;
 }
 
 .button:hover {
@@ -334,9 +339,13 @@ p {
   margin-top: 0.6rem;
 }
 
+.band-close {
+  padding-bottom: 0;
+}
+
 .site-footer {
-  padding: 2.5rem 0 2.75rem;
-  border-top: 1px solid rgba(210, 220, 208, 0.9);
+  padding: 0 0 2.75rem;
+  border-top: 0;
 }
 
 .footer-name {
@@ -346,14 +355,46 @@ p {
   font-weight: 700;
 }
 
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 1.25rem;
+}
+
+.footer-contact .button {
+  width: 36px;
+  height: 36px;
+}
+
+.footer-contact .button svg {
+  width: 20px;
+  height: 20px;
+}
+
+#contact {
+  scroll-margin-top: var(--header);
+}
+
+.footer-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+}
+
+.footer-contact svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex: none;
+}
+
 .site-footer p {
   margin-bottom: 0.35rem;
 }
 
-.copyright {
-  margin-top: 0.85rem;
+.footer-contact {
   margin-bottom: 0;
-  font-size: 0.95rem;
 }
 
 @media (min-width: 768px) {
@@ -367,6 +408,10 @@ p {
 
   .band {
     padding: 9rem 0;
+  }
+
+  .band-close {
+    padding-bottom: 0;
   }
 
   .cards {
