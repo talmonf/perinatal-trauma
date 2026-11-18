@@ -361,6 +361,46 @@ html:not([lang="he"]) .i18n-he {
     width: min(17rem, 74%);
     opacity: 0.45;
   }
+
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-height: 0;
+    padding: 0.35rem 0 2.75rem;
+  }
+
+  .hero-media {
+    position: relative;
+    inset: auto;
+    align-self: flex-end;
+    width: min(220px, 58vw);
+    margin: 0.15rem 0.4rem 0;
+  }
+
+  .hero-media img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center 18%;
+    transform: none;
+    filter: blur(0.4px);
+    opacity: 0.48;
+    -webkit-mask-image: radial-gradient(ellipse at center, #000 52%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, #000 52%, transparent 80%);
+  }
+
+  .hero-shade {
+    display: none;
+  }
+
+  .hero-copy {
+    width: min(1024px, calc(100% - 3rem));
+    max-width: none;
+    margin-top: 0.15rem;
+    margin-inline: auto;
+  }
 }
 
 .band-help .wrap {
@@ -426,19 +466,9 @@ html:not([lang="he"]) .i18n-he {
 
 .footer-contact {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.35rem 1.25rem;
-}
-
-.footer-contact .button {
-  width: 36px;
-  height: 36px;
-}
-
-.footer-contact .button svg {
-  width: 20px;
-  height: 20px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.55rem;
 }
 
 #contact {
@@ -448,14 +478,27 @@ html:not([lang="he"]) .i18n-he {
 .footer-contact a {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   text-decoration: none;
+  white-space: nowrap;
+}
+
+.footer-contact a:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
 
 .footer-contact svg {
-  width: 1.05em;
-  height: 1.05em;
+  width: 1.05rem;
+  height: 1.05rem;
   flex: none;
+}
+
+.contact-wa svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #25d366;
 }
 
 .site-footer p {
@@ -535,5 +578,12 @@ html:not([lang="he"]) .i18n-he {
       rgba(250, 248, 245, 0.45) 68%,
       rgba(250, 248, 245, 0.2) 100%
     );
+  }
+
+  .footer-contact {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.4rem 1.75rem;
   }
 }
