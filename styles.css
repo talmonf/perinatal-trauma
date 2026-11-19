@@ -319,10 +319,6 @@ html:not([lang="he"]) .i18n-he {
   margin-top: 1.15rem;
 }
 
-.emphasis {
-  font-weight: 700;
-}
-
 .welcome {
   font-size: 1.35rem;
   font-weight: 600;
