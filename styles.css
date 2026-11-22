@@ -355,11 +355,11 @@ html:not([lang="he"]) .i18n-he {
 
 @media (max-width: 767px) {
   .about-bg {
-    top: 4.6rem;
+    top: 5.7rem;
     right: auto;
     bottom: auto;
     left: auto;
-    inset-inline-end: 0.15rem;
+    inset-inline-end: 3rem;
     width: 8.25rem;
     height: auto;
     transform: none;
@@ -376,7 +376,7 @@ html:not([lang="he"]) .i18n-he {
 
   .band-sage h2,
   .band-sage .welcome {
-    padding-inline-end: 7.4rem;
+    padding-inline-end: 10.25rem;
   }
 
   .hero {
