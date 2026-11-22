@@ -304,7 +304,7 @@ html:not([lang="he"]) .i18n-he {
 }
 
 .band {
-  padding: 6rem 0;
+  padding: 3rem 0;
 }
 
 .band-card {
@@ -325,7 +325,7 @@ html:not([lang="he"]) .i18n-he {
   width: min(22rem, 78%);
   height: 70%;
   transform: translate(-50%, -50%);
-  opacity: 0.28;
+  opacity: 0.5;
   pointer-events: none;
 }
 
@@ -357,7 +357,7 @@ html:not([lang="he"]) .i18n-he {
   .about-bg {
     width: min(16rem, 70%);
     height: 46%;
-    opacity: 0.2;
+    opacity: 0.42;
   }
 
   .hero {
@@ -423,10 +423,6 @@ html:not([lang="he"]) .i18n-he {
   margin-bottom: 0;
   font-size: 16px;
   line-height: 26px;
-}
-
-.band-close .button {
-  margin-top: 0.6rem;
 }
 
 .band-close {
@@ -500,7 +496,7 @@ html:not([lang="he"]) .i18n-he {
   }
 
   .band {
-    padding: 9rem 0;
+    padding: 4.5rem 0;
   }
 
   .band-close {
@@ -514,7 +510,7 @@ html:not([lang="he"]) .i18n-he {
   .about-bg {
     width: 380px;
     height: 460px;
-    opacity: 0.26;
+    opacity: 0.52;
   }
 
   .about-bg img {
