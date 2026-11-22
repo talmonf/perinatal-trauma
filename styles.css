@@ -355,9 +355,28 @@ html:not([lang="he"]) .i18n-he {
 
 @media (max-width: 767px) {
   .about-bg {
-    width: min(16rem, 70%);
-    height: 46%;
-    opacity: 0.42;
+    top: 4.6rem;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    inset-inline-end: 0.15rem;
+    width: 8.25rem;
+    height: auto;
+    transform: none;
+    opacity: 0.62;
+  }
+
+  .about-bg img {
+    height: auto;
+    object-fit: contain;
+    object-position: center top;
+    -webkit-mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
+  }
+
+  .band-sage h2,
+  .band-sage .welcome {
+    padding-inline-end: 7.4rem;
   }
 
   .hero {
@@ -371,15 +390,18 @@ html:not([lang="he"]) .i18n-he {
 
   .hero-media {
     position: relative;
+    z-index: 0;
     inset: auto;
     align-self: flex-end;
     width: min(220px, 58vw);
-    margin: 0.15rem 0.4rem 0;
+    margin: 1.35rem 0.4rem 0;
   }
 
   .hero-media img {
+    display: block;
     width: 100%;
     height: auto;
+    margin-bottom: -46%;
     object-fit: contain;
     object-position: center 18%;
     transform: none;
@@ -394,9 +416,11 @@ html:not([lang="he"]) .i18n-he {
   }
 
   .hero-copy {
+    position: relative;
+    z-index: 1;
     width: min(1024px, calc(100% - 3rem));
     max-width: none;
-    margin-top: 0.15rem;
+    margin-top: 0;
     margin-inline: auto;
   }
 }
