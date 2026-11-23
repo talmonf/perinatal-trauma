@@ -278,6 +278,7 @@ html:not([lang="he"]) .i18n-he {
   max-width: none;
   object-fit: cover;
   object-position: center 28%;
+  border-radius: 3rem;
   filter: blur(2px);
   transform: scale(1.05);
   opacity: 0.9;
