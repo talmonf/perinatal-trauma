@@ -312,36 +312,7 @@ html:not([lang="he"]) .i18n-he {
 }
 
 .band-sage {
-  position: relative;
-  overflow: hidden;
   background: rgba(224, 231, 223, 0.45);
-}
-
-.about-bg {
-  position: absolute;
-  z-index: 0;
-  top: 50%;
-  left: 50%;
-  width: min(22rem, 78%);
-  height: 70%;
-  transform: translate(-50%, -50%);
-  opacity: 0.5;
-  pointer-events: none;
-}
-
-.about-bg img {
-  width: 100%;
-  height: 100%;
-  max-width: none;
-  object-fit: cover;
-  object-position: center 18%;
-  -webkit-mask-image: radial-gradient(ellipse at center, #000 34%, transparent 74%);
-  mask-image: radial-gradient(ellipse at center, #000 34%, transparent 74%);
-}
-
-.band-sage .wrap {
-  position: relative;
-  z-index: 1;
 }
 
 .band p + p {
@@ -349,29 +320,6 @@ html:not([lang="he"]) .i18n-he {
 }
 
 @media (max-width: 767px) {
-  .about-bg {
-    position: relative;
-    float: inline-end;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
-    width: 8.25rem;
-    height: auto;
-    margin-block: 0.35rem 0.5rem;
-    margin-inline: 0.85rem 0;
-    transform: none;
-    opacity: 0.62;
-  }
-
-  .about-bg img {
-    height: auto;
-    object-fit: contain;
-    object-position: center top;
-    -webkit-mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
-    mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
-  }
-
   .hero {
     display: flex;
     flex-direction: column;
@@ -394,14 +342,15 @@ html:not([lang="he"]) .i18n-he {
     display: block;
     width: 100%;
     height: auto;
-    margin-bottom: -46%;
-    object-fit: contain;
-    object-position: center 18%;
+    aspect-ratio: 768 / 640;
+    margin-bottom: -32%;
+    object-fit: cover;
+    object-position: center top;
     transform: none;
     filter: blur(0.4px);
-    opacity: 0.48;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 52%, transparent 80%);
-    mask-image: radial-gradient(ellipse at center, #000 52%, transparent 80%);
+    opacity: 0.55;
+    -webkit-mask-image: radial-gradient(ellipse at center 42%, #000 58%, transparent 84%);
+    mask-image: radial-gradient(ellipse at center 42%, #000 58%, transparent 84%);
   }
 
   .hero-shade {
@@ -429,6 +378,32 @@ html:not([lang="he"]) .i18n-he {
   border: 0.8px solid rgba(210, 220, 208, 0.5);
   border-radius: 1rem;
   background: var(--card);
+}
+
+.card-focus {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.card-bg img {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center 30%;
+  opacity: 0.34;
+}
+
+.card-focus > :not(.card-bg) {
+  position: relative;
+  z-index: 1;
 }
 
 .card .rule {
@@ -524,20 +499,7 @@ html:not([lang="he"]) .i18n-he {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .about-bg {
-    width: 380px;
-    height: 460px;
-    opacity: 0.52;
-  }
-
-  .about-bg img {
-    object-fit: contain;
-    object-position: center 12%;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 46%, transparent 78%);
-    mask-image: radial-gradient(ellipse at center, #000 46%, transparent 78%);
-  }
-
-  .hero-copy {
+  .cards {
     max-width: 34rem;
   }
 
@@ -552,13 +514,14 @@ html:not([lang="he"]) .i18n-he {
   .hero-media img {
     width: 100%;
     height: auto;
-    object-fit: contain;
-    object-position: center;
+    aspect-ratio: 768 / 640;
+    object-fit: cover;
+    object-position: center top;
     transform: none;
     filter: blur(0.6px);
     opacity: 0.72;
-    -webkit-mask-image: radial-gradient(ellipse at center, #000 64%, transparent 88%);
-    mask-image: radial-gradient(ellipse at center, #000 64%, transparent 88%);
+    -webkit-mask-image: radial-gradient(ellipse at center 42%, #000 62%, transparent 86%);
+    mask-image: radial-gradient(ellipse at center 42%, #000 62%, transparent 86%);
   }
 
   .hero-shade {
