@@ -334,7 +334,7 @@ html:not([lang="he"]) .i18n-he {
     z-index: 0;
     inset: auto;
     align-self: flex-end;
-    width: min(220px, 58vw);
+    width: min(260px, 68vw);
     margin: 1.35rem 0.4rem 0;
   }
 
@@ -342,15 +342,15 @@ html:not([lang="he"]) .i18n-he {
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 768 / 640;
-    margin-bottom: -32%;
+    aspect-ratio: 768 / 820;
+    margin-bottom: -50%;
     object-fit: cover;
     object-position: center top;
     transform: none;
     filter: blur(0.4px);
     opacity: 0.55;
-    -webkit-mask-image: radial-gradient(ellipse at center 42%, #000 58%, transparent 84%);
-    mask-image: radial-gradient(ellipse at center 42%, #000 58%, transparent 84%);
+    -webkit-mask-image: radial-gradient(ellipse at center 46%, #000 70%, transparent 92%);
+    mask-image: radial-gradient(ellipse at center 46%, #000 70%, transparent 92%);
   }
 
   .hero-shade {
@@ -499,8 +499,8 @@ html:not([lang="he"]) .i18n-he {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .cards {
-    max-width: 34rem;
+  .card-bg img {
+    object-position: center 42%;
   }
 
   .hero-media {
@@ -514,14 +514,14 @@ html:not([lang="he"]) .i18n-he {
   .hero-media img {
     width: 100%;
     height: auto;
-    aspect-ratio: 768 / 640;
+    aspect-ratio: 768 / 820;
     object-fit: cover;
     object-position: center top;
     transform: none;
     filter: blur(0.6px);
     opacity: 0.72;
-    -webkit-mask-image: radial-gradient(ellipse at center 42%, #000 62%, transparent 86%);
-    mask-image: radial-gradient(ellipse at center 42%, #000 62%, transparent 86%);
+    -webkit-mask-image: radial-gradient(ellipse at center 46%, #000 74%, transparent 94%);
+    mask-image: radial-gradient(ellipse at center 46%, #000 74%, transparent 94%);
   }
 
   .hero-shade {
