@@ -348,20 +348,18 @@ html:not([lang="he"]) .i18n-he {
   margin-top: 1.15rem;
 }
 
-.welcome {
-  font-size: 1.35rem;
-  font-weight: 600;
-}
-
 @media (max-width: 767px) {
   .about-bg {
-    top: 5.7rem;
+    position: relative;
+    float: inline-end;
+    top: auto;
     right: auto;
     bottom: auto;
     left: auto;
-    inset-inline-end: 3rem;
     width: 8.25rem;
     height: auto;
+    margin-block: 0.35rem 0.5rem;
+    margin-inline: 0.85rem 0;
     transform: none;
     opacity: 0.62;
   }
@@ -372,11 +370,6 @@ html:not([lang="he"]) .i18n-he {
     object-position: center top;
     -webkit-mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
     mask-image: radial-gradient(ellipse at center 40%, #000 58%, transparent 80%);
-  }
-
-  .band-sage h2,
-  .band-sage .welcome {
-    padding-inline-end: 10.25rem;
   }
 
   .hero {
