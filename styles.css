@@ -206,6 +206,7 @@ p {
   border-radius: 999px;
   background: transparent;
   color: var(--muted);
+  text-decoration: none;
   font: inherit;
   font-size: 0.8rem;
   font-weight: 700;
@@ -215,12 +216,20 @@ p {
   cursor: pointer;
 }
 
+.lang-option:link,
+.lang-option:visited {
+  color: var(--muted);
+  text-decoration: none;
+}
+
 .lang-option:hover {
   color: var(--ink);
 }
 
-html:not([lang="he"]) .lang-option[data-set-lang="en"],
-html[lang="he"] .lang-option[data-set-lang="he"] {
+html:not([lang="he"]) .lang-option[data-set-lang="en"]:link,
+html:not([lang="he"]) .lang-option[data-set-lang="en"]:visited,
+html[lang="he"] .lang-option[data-set-lang="he"]:link,
+html[lang="he"] .lang-option[data-set-lang="he"]:visited {
   background: var(--ink);
   color: var(--page);
 }
